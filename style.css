@@ -71,9 +71,17 @@ body {
     padding: 0 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .container {
         padding: 0 39px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .container {
+        padding: 0 33px;
+    }
+    body {
+        font-size: 16px;
     }
 }
 
@@ -119,9 +127,33 @@ body {
     margin: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .navigation li a {
         font-size: inherit;
+    }
+}
+@media screen and (max-width: 576px) {
+    .header {
+        padding: 16px 0;
+    }
+    .header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation, .navigation ul {
+        width: 100%;
+    }
+    .navigation ul {
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px #C3D1C6 solid;
+    }
+    .navigation li a {
+        font-size: 18px;
+    }
+    .navigation .last-element {
+        flex-grow: 2;
+        text-align: end;
     }
 }
 
@@ -157,7 +189,7 @@ body {
     line-height: 150%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
     .main_block h2 {
         font-size: 40px;
         margin-top: 37px;
@@ -167,6 +199,28 @@ body {
     }
     .main_block button {
         font-size: 20px;
+    }
+    .button-link {
+        width: 210px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .main_block {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .main_block h2 {
+        font-size: 36px;
+        margin-bottom: 10px;
+    }
+    .main_block p {
+        font-size: 16px;
+        margin-bottom: 11px;
+    }
+    .button-link {
+        font-size: 18px;
+        width: 178px;
+        height: 50px;
     }
 }
 
@@ -183,6 +237,10 @@ body {
 .reproductions .card {
     background-color: var(--card-bgc);
     padding: 20px 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .reproductions img {
     width: 100%;
@@ -242,6 +300,32 @@ body {
     }
     .reproductions h2 {
         font-size: 30px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .reproductions {
+        margin-bottom: 50px;
+    }
+    .reproductions h2 {
+        font-size: 24px;
+    }
+    .reproductions .menu-wrapper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+    .country-wrapper button {
+        font-size: 18px;
+    }
+    .reproductions .img-name {
+        font-size: 24px;
+    }
+    .reproductions .price {
+        font-size: 20px;
+    }
+    .reproductions .button-link {
+        font-size: 18px;
     }
 }
 
@@ -325,6 +409,28 @@ body {
         margin-top: 30px;
     }
 }
+@media screen and (max-width: 576px) {
+    .new-collection img {
+        width: 50px;
+        height: 50px;
+    }
+    .new-collection h2 {
+        font-size: 24px;
+    }
+    .new-collection .title-wrapper {
+        margin-bottom: 20px;
+    }
+    .new-collection .link {
+        margin-top: 20px;
+    }
+    .new-collection .link {
+        font-size: 18px;
+        padding: 15px 34px;
+    }
+    .new-collection {
+        margin-bottom: 50px;
+    }
+}
 
 /* our-team */
 .our-team {
@@ -362,6 +468,20 @@ body {
     }
     .our-team h2 {
         font-size: 30px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .our-team .container {
+        gap: 30px;
+    }
+    .our-team h2 {
+        font-size: 24px;
+    }
+    .our-team h2, .our-team p {
+        margin-bottom: 20px;
+    }
+    .our-team {
+        margin-bottom: 50px;
     }
 }
 
@@ -441,6 +561,25 @@ body {
     }
     .our-team .our-team-img {
         width: 75%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .footer .container div {
+        flex-grow: 1;
+    }
+    .footer .address {
+        text-align: end;
+    }
+    .footer .third-item .social-media {
+        justify-content: center;
+    }
+    .footer .third-item {
+        text-align: center;
+        padding-top: 16px;
+        border-top: 1px #C3D1C6 solid;
+    }
+    .footer .third-item p {
+        display: inline;
     }
 }
 
