@@ -60,8 +60,7 @@ h2, p {
 
 body {
     font-family: "Raleway", sans-serif;
-    font-optical-sizing: auto;
-    font-size: 1.1rem;
+    font-size: 18px;
     font-weight: 500;
     font-style: normal;
     color: #2C2D35;
@@ -72,7 +71,11 @@ body {
     padding: 0 15px;
 }
 
-
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 39px;
+    }
+}
 
 .header, .footer {
     background-color:#E1EDE6;
@@ -116,6 +119,12 @@ body {
     margin: 0;
 }
 
+@media screen and (min-width: 768px) {
+    .navigation li a {
+        font-size: inherit;
+    }
+}
+
 
 
 /* ====== MAIN_BLOCK ====== */
@@ -148,6 +157,19 @@ body {
     line-height: 150%;
 }
 
+@media screen and (min-width: 768px) {
+    .main_block h2 {
+        font-size: 40px;
+        margin-top: 37px;
+    }
+    .main_block p {
+        margin-bottom: 40px;
+    }
+    .main_block button {
+        font-size: 20px;
+    }
+}
+
 /* ====== REPRODUCTIONS ====== */
 .reproductions {
     margin-bottom: 70px;
@@ -160,7 +182,7 @@ body {
 }
 .reproductions .card {
     background-color: var(--card-bgc);
-    padding: 20px 20px 30px 20px;
+    padding: 20px 30px 20px;
 }
 .reproductions img {
     width: 100%;
@@ -185,6 +207,7 @@ body {
 }
 .reproductions .button-link {
     width: 100%;
+    font-size: 20px;
 }
 .reproductions h2 {
     font-size: 40px;
@@ -195,21 +218,25 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.country-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
 .country-wrapper button {
     padding: 10px 20px;
     background-color: var(--focus-green);
     border-radius: 20px;
     border: none;
-}
-.country-wrapper button:not(:last-child) {
-    margin-right: 32px;
+    font-size: 20px;
+    color: #2C2D35;
 }
 .country-wrapper button:hover {
   background-color: var(--active-green);
   color: var(--white-text);
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 768px) {
     .reproductions .cards {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -256,6 +283,7 @@ body {
     margin-top: 60px;
     border: 1px #EEDB6D solid; 
     box-sizing: border-box;
+    font-size: 20px;
 }
 .new-collection .link:hover {
     background-color: var(--hover-yellow);
@@ -273,6 +301,31 @@ body {
     border: 1px var(--active-yellow) solid; 
 }
 
+@media screen and (max-width: 768px) {
+    .new-collection .content-wrapper {
+        width: 100%;
+    }
+    .new-collection {
+        background: url(../img/pic_background_768.png) no-repeat center/cover;
+    }
+    .new-collection h2 {
+        font-size: 30px;
+    }
+    .new-collection img {
+        width: 60px;
+        height: 60px;
+    }
+    .new-collection span {
+        display: block;
+    }
+    .new-collection .title-wrapper {
+        margin-bottom: 30px;
+    }
+    .new-collection .link {
+        margin-top: 30px;
+    }
+}
+
 /* our-team */
 .our-team {
     margin-bottom: 70px;
@@ -282,18 +335,38 @@ body {
     gap: 30px;
     align-items: center;
 }
-.our-team h2 {
-    font-size: 40px;
+.our-team h2, .our-team p {
     margin-bottom: 20px;
 }
+.our-team .our-team-img {
+    width: 50%;
+}
+.our-team h2 {
+    font-size: 40px;
+}
 .our-team p {
-    margin-bottom: 20px;
     line-height: 150%;
 }
 .our-team .img-wrapper {
     display: flex;
     gap: 30px;
 }
+@media screen and (max-width: 768px) {
+    .our-team .container {
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+    }
+    .our-team h2, .our-team p {
+        margin-bottom: 30px;
+    }
+    .our-team h2 {
+        font-size: 30px;
+    }
+}
+
+
+
 .footer {
     background-color: var(--card-bgc);
 }
@@ -313,12 +386,14 @@ body {
     align-items: center;
 }
 .footer .logo-wrapper p {
-color: var(--hover-green);
-margin-left: 8px;
+    color: var(--hover-green);
+    margin-left: 8px;
+    font-size: 20px;
 }
 .footer .address a {
     font-size: 20px;
     margin-bottom: 8px;
+    color: #2C2D35;
 }
 .footer .address p {
     color: var(--text-color-green);
@@ -326,9 +401,10 @@ margin-left: 8px;
 .second-item a {
     color: var(--text-color-green);
 }
-.second-item a {
-    margin-bottom: 6px;
-    display: block;
+.second-item .flex-block {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 .footer .second-item .title {
     font-size: 20px;
@@ -353,6 +429,21 @@ margin-left: 8px;
     gap: 30px;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .footer .container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .footer .first-item {
+        width: 100%;
+        flex-direction: row;
+    }
+    .our-team .our-team-img {
+        width: 75%;
+    }
+}
+
 /* links */
 a {
     text-decoration: none;
